@@ -8,11 +8,9 @@ class OrdersController < ApplicationController
   end
 
   def new
-    ?  # We'll see that in a moment.
   end
 
   def create
-    @order = ?  # We'll see that in a moment.
   end
 
   def edit
@@ -21,7 +19,7 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    @order.? # We'll see that in a moment.
+    @order.save
   end
 
   def destroy
