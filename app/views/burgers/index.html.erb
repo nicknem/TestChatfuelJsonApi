@@ -1,2 +1,5 @@
 <h1>Burgers#index</h1>
-<p>Find me in app/views/burgers/index.html.erb</p>
+
+<% @burgers.each do |burger| %>
+  <%= link_to burger.name, burger_path(burger) %>
+<% end %>
