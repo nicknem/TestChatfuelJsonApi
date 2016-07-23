@@ -1,7 +1,10 @@
-<h1>Burger's list</h1>
-<ul>
-<% @burgers.each do |burger| %>
-  <li><%= link_to burger.name, burger_path(burger) %></li>
-<% end %>
+<div class="container">
+  <h1>Burger's list</h1>
+  <ul>
+  <% @burgers.each do |burger| %>
+    <li><%= link_to burger.name, burger_path(burger) %></li>
+  <% end %>
 
-</ul>
+  </ul>
+</div>
+

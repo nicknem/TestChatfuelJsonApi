@@ -1,4 +1,8 @@
+
+<div class="container">
+
 <h2>Burger : <%= @burger.name %></h2>
 <p>Prix : <%= @burger.price %></p>
 
-<%= link_to "Back to Burgers", burgers_path %>
+<%= link_to "Back to Burgers", burgers_path, {class: "btn btn-primary"} %>
+</div>

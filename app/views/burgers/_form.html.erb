@@ -1,7 +1,6 @@
-<%= form_for(@burger, url: create_via_json_burgers_path, method: :get) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.submit %>
+<%= simple_form_for(@burger, url: create_via_json_burgers_path, method: :get) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.button :submit %>
 <% end %>
