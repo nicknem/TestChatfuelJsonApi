@@ -18,6 +18,17 @@ class BurgersController < ApplicationController
     redirect_to burger_path(@burger)
   end
 
+  def create_via_json
+    puts params
+    # params[:name], params[:price]
+    burger = Burger.new(burger_params)
+    if burger.save
+      head 200, content_type: "text/html"
+    else
+      head 500, content_type: "text/html"
+    end
+  end
+
   def edit
   end
 

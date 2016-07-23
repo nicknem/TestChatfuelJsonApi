@@ -3,5 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'users' => 'users#index'
   resources :orders
-  resources :burgers
+  resources :burgers do
+    collection do
+      get :create_via_json
+    end
+  end
+
 end

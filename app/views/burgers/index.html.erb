@@ -1,5 +1,4 @@
-<h1>La liste des burgés</h1>
-
+<h1>Burger's list</h1>
 <ul>
 <% @burgers.each do |burger| %>
   <li><%= link_to burger.name, burger_path(burger) %></li>
