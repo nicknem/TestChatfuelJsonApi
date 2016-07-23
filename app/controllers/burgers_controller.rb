@@ -1,37 +1,33 @@
 class BurgersController < ApplicationController
+  before_action :set_burger, only: [ :show, :edit, :update, :destroy]
+
   def index
     @burgers = Burger.all
   end
 
   def show
-    set_burger
   end
 
   def new
+    @burger = Burger.new
   end
 
   def create
-    @burger = Burger.new(params[:burger])
+    @burger = Burger.new(burger_params)
     @burger.save
-
     redirect_to burger_path(@burger)
   end
 
   def edit
-    set_burger
   end
 
   def update
-    set_burger
     @burger.update(params[:burger])
-
     redirect_to burger_path(@burger)
   end
 
   def destroy
-    set_burger
     @burger.destroy
-
     redirect_to burgers_path
   end
 
