@@ -1,6 +1,9 @@
-<%= simple_form_for(@burger, url: create_via_json_burgers_path, method: :get) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :name %>
-  <%= f.input :price %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+
+  <%= simple_form_for(@burger, url: create_via_json_burgers_path, method: :get) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, placeholder: "Nom du Burger"%>
+    <%= f.input :price, placeholder: "Prix du Burger" %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

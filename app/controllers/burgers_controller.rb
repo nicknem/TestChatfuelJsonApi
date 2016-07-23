@@ -3,6 +3,11 @@ class BurgersController < ApplicationController
 
   def index
     @burgers = Burger.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @burgers }
+    end
+
   end
 
   def show
