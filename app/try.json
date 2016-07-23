@@ -1,0 +1,19 @@
+{
+  "message": {
+    "text": "hello, world!"
+  }
+}
+
+
+
+// Image card
+{
+  "message":{
+    "attachment":{
+      "type":"image",
+      "payload":{
+        "url":"https://facedetection.com/wp-content/uploads/reverse-image-search-people-photos.jpg"
+      }
+    }
+  }
+}

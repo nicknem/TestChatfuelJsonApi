@@ -17,10 +17,12 @@ gem 'font-awesome-sass'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'autoprefixer-rails'
 
+gem 'active_model_serializers', '~> 0.10.0'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
