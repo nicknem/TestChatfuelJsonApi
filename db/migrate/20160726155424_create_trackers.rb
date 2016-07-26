@@ -4,7 +4,7 @@ class CreateTrackers < ActiveRecord::Migration[5.0]
       t.string :fb_first_name
       t.string :fb_last_name
       t.string :fb_locale
-      t.integer :fb_gender
+      t.string :fb_gender
       t.integer :botstage
 
       t.timestamps
