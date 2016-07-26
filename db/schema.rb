@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160726155424) do
     t.string   "fb_first_name"
     t.string   "fb_last_name"
     t.string   "fb_locale"
-    t.string   "fb_gender"
+    t.integer  "fb_gender"
     t.integer  "botstage"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
