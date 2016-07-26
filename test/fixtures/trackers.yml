@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fb_first_name: MyString
+  fb_last_name: MyString
+  fb_locale: MyString
+  fb_gender: MyString
+  botstage: 1
+
+two:
+  fb_first_name: MyString
+  fb_last_name: MyString
+  fb_locale: MyString
+  fb_gender: MyString
+  botstage: 1

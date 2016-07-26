@@ -1,0 +1,11 @@
+<div class="container">
+  <%= simple_form_for(@tracker, url: create_via_json_trackers_path, method: :get) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :fb_first_name, placeholder: "Facebook first name"%>
+    <%= f.input :fb_last_name, placeholder: "Facebooke last name" %>
+    <%= f.input :fb_locale, placeholder: "Locale"%>
+    <%= f.input :fb_gender, placeholder: "Gender" %>
+    <%= f.input :botstage, placeholder: "Stage" %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

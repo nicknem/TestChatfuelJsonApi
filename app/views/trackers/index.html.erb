@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Trackers</h1>
+  <ul>
+  <% @trackers.each do |tracker| %>
+    <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %> <%= tracker.fb_last_name%>
+    // Stage: <%= tracker.botstage %></li>
+  <% end %>
+  </ul>
+</div>
+

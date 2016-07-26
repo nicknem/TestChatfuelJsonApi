@@ -1,0 +1,6 @@
+<div class="container">
+  <h2><%= @tracker.fb_first_name %> <%= @tracker.fb_last_name %>, <%= @tracker.fb_gender %>,
+  <%= @tracker.fb_locale %></h2>
+  <p> Avancement : <%= @tracker.botstage %></p>
+  <%= link_to "Back to Trackers", trackers_path, {class: "btn btn-primary"} %>
+</div>
