@@ -2,7 +2,7 @@
   <h1>Trackers</h1>
   <ul>
   <% @trackers.each do |tracker| %>
-    <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %>, <%= @tracker.fb_last_name %>, <%= @tracker.fb_locale %>, <%= @tracker.fb_gender %>, <%= @tracker.botstage %> </li>
+    <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %>, <%= tracker.fb_last_name %>, <%= tracker.fb_locale %>, <%= tracker.fb_gender %>, <%= tracker.botstage %></li>
   <% end %>
   </ul>
 </div>
