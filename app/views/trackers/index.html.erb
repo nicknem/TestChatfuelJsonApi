@@ -5,12 +5,12 @@
     new_tracker_path %></p>
 
   <% else %>
-    <ul>
+    <ol>
     <% @trackers.each do |tracker| %>
-      <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %>, <%= tracker.fb_last_name %>, <%= tracker.fb_locale %>, <%= tracker.fb_gender%>, <%= tracker.botstage %> <%= link_to "Delete", tracker_path(tracker), data: {confirm: "Are you sure?"}, :method => :delete %>
+      <li><%= tracker.botname %>, <%= tracker.fb_first_name %>, <%= tracker.fb_last_name %>, <%= tracker.fb_locale %>, <%= tracker.fb_gender%>, <%= tracker.botstage %> <%= link_to "Show", tracker_path(tracker) %>, <%= link_to "Delete", tracker_path(tracker), data: {confirm: "Are you sure?"}, :method => :delete %>
       </li>
     <% end %>
-    </ul>
+    </ol>
   <% end %>
 </div>
 

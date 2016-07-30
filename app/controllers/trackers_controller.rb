@@ -41,6 +41,6 @@ class TrackersController < ApplicationController
   def tracker_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:tracker).permit(:fb_first_name, :fb_last_name, :fb_gender, :fb_locale, :botstage)
+    params.require(:tracker).permit(:fb_first_name, :fb_last_name, :fb_gender, :fb_locale, :botstage, :botname)
   end
 end
