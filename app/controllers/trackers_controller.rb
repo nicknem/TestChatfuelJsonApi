@@ -1,5 +1,5 @@
 class TrackersController < ApplicationController
-  before_action :set_tracker, only: [ :show]
+  before_action :set_tracker, only: [ :show, :destroy]
   def index
     @trackers = Tracker.all
   end
@@ -27,9 +27,12 @@ class TrackersController < ApplicationController
     end
   end
 
+  def destroy
+    @tracker.destroy
+    redirect_to trackers_path
+  end
+
   private
-
-
 
   def set_tracker
     @tracker = Tracker.find(params[:id])

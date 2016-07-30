@@ -9,7 +9,6 @@ Rails.application.routes.draw do
       get :create_via_json
     end
   end
-
   resources :trackers do
     collection do
       get :create_via_json

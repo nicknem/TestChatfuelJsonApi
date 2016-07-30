@@ -1,9 +1,16 @@
 <div class="container">
   <h1>Trackers</h1>
-  <ul>
-  <% @trackers.each do |tracker| %>
-    <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %>, <%= tracker.fb_last_name %>, <%= tracker.fb_locale %>, <%= tracker.fb_gender %>, <%= tracker.botstage %></li>
+  <% if @trackers.empty? %>
+    <p>La liste est vide, il est surement temps de <%= link_to "créer un tracker",
+    new_tracker_path %></p>
+
+  <% else %>
+    <ul>
+    <% @trackers.each do |tracker| %>
+      <li><%= link_to tracker.fb_first_name, tracker_path(tracker) %>, <%= tracker.fb_last_name %>, <%= tracker.fb_locale %>, <%= tracker.fb_gender%>, <%= tracker.botstage %> <%= link_to "Delete", tracker_path(tracker), data: {confirm: "Are you sure?"}, :method => :delete %>
+      </li>
+    <% end %>
+    </ul>
   <% end %>
-  </ul>
 </div>
 
