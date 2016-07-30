@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726165949) do
+ActiveRecord::Schema.define(version: 20160730202001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160726165949) do
     t.string   "fb_first_name"
     t.string   "fb_last_name"
     t.string   "fb_locale"
-    t.integer  "fb_gender"
+    t.string   "fb_gender"
     t.integer  "botstage"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
