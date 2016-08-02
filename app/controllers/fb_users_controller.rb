@@ -17,12 +17,17 @@ before_action :set_fb_user, only: [:show, :destroy]
     redirect_to fb_user_path
   end
 
+  def create_via_json
+  end
+
   def destroy
     @fb_user.destroy
     redirect_to fb_users_path
   end
 
   private
+
+
 
   def set_fb_user
     @fb_user = FbUser.find(params[:id])

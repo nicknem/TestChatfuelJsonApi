@@ -4,14 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'users' => 'users#index'
   resources :orders
-  resources :fb_users
-
-  resources :burgers do
-    collection do
-      get :create_via_json
-    end
-  end
-  resources :trackers do
+  resources :fb_users, :burgers, :trackers do
     collection do
       get :create_via_json
     end

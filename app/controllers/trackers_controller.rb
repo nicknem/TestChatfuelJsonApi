@@ -17,6 +17,7 @@ class TrackersController < ApplicationController
       redirect_to tracker_path(@tracker)
     else
       render "new"
+    end
   end
 
   def create_via_json
