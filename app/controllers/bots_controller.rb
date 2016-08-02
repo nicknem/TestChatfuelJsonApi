@@ -21,6 +21,8 @@ class BotsController < ApplicationController
   end
 
   def destroy
+    @bot.destroy
+    redirect_to bots_path
   end
 
   private

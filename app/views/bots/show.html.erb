@@ -1,4 +1,5 @@
 <div class="container-fluid">
   <h1><%= @bot.name %></h1>
   <%= link_to "Back to bots list", bots_path, {class: "btn btn-primary"} %>
+  <%= link_to "Delete this bot", @bot, {class: "btn btn-danger", :method => :delete} %>
 </div>
