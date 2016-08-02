@@ -6,7 +6,7 @@
   <% else %>
     <ul>
       <% @fb_users.each do |fb_user| %>
-        <%= user.fb_first_name user.fb_last_name %>
+        <li><%= fb_user.fb_first_name  %> <%= fb_user.fb_last_name %> <%= fb_user.fb_gender %> <%= fb_user.fb_locale %></li>
       <% end %>
     </ul>
   <% end %>

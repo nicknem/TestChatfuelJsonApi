@@ -18,6 +18,13 @@ before_action :set_fb_user, only: [:show, :destroy]
   end
 
   def create_via_json
+    puts params
+    fb_user = FbUser.new(fb_user_params)
+    if fb_user.save
+      head 200, content_type: "text/html"
+    else
+      head 500, content_type: "text/html"
+    end
   end
 
   def destroy
@@ -27,9 +34,11 @@ before_action :set_fb_user, only: [:show, :destroy]
 
   private
 
-
-
   def set_fb_user
     @fb_user = FbUser.find(params[:id])
+  end
+
+  def fb_user_params
+    params.require(:fb_user).permit(:fb_first_name, :fb_last_name, :fb_gender, :fb_locale)
   end
 end
