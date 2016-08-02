@@ -6,7 +6,7 @@
     <% else %>
     <ul>
       <% @bots.each do |bot| %>
-        <li><%= link_to bot.name, bot_path(bot) %> <%= link_to "Delete", bot_path(bot),{class: "btn btn-danger", :method => :delete} %></li>
+        <li><h2><%= link_to bot.name, bot_path(bot) %> <%= link_to "Delete", bot_path(bot),{class: "btn btn-danger", :method => :delete} %></h2></li>
       <% end %>
     </ul>
     <% end %>
