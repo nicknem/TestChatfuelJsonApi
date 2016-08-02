@@ -12,8 +12,8 @@ class BotsController < ApplicationController
   end
 
   def create
-    @bot = Bot.new
-    if @bot.save(bot_params)
+    @bot = Bot.new(bot_params)
+    if @bot.save
       redirect_to bot_path(@bot)
     else
       render "new"
