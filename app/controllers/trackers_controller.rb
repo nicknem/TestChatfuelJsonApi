@@ -13,8 +13,10 @@ class TrackersController < ApplicationController
 
   def create
     @tracker = Tracker.new(tracker_params)
-    @tracker.save
-    redirect_to tracker_path(@tracker)
+    if @tracker.save
+      redirect_to tracker_path(@tracker)
+    else
+      render "new"
   end
 
   def create_via_json

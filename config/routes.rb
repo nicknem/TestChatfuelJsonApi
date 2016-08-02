@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'users' => 'users#index'
   resources :orders
+  resources :fb_users
 
   resources :burgers do
     collection do

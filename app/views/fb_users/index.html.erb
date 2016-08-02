@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>FB users list:</h1>
+  <% if @fb_users.empty? %>
+    <p>No fbusers yet, create one: <%= link_to "Créer un fb_user",
+    new_fb_user_path %></p>
+  <% else %>
+    <ul>
+      <% @fb_users.each do |fb_user| %>
+        <%= user.fb_first_name user.fb_last_name %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

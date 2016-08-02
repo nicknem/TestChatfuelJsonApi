@@ -1,0 +1,11 @@
+<div class="container">
+
+  <%= simple_form_for(@fb_user, url: create_via_json_fb_users_path, method: :get) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :fb_first_name, placeholder: "First name"%>
+    <%= f.input :fb_last_name, placeholder: "Last name" %>
+    <%= f.input :fb_gender, placeholder: "Gender" %>
+    <%= f.input :fb_locale, placeholder: "Locale" %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
