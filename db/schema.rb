@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802152109) do
+ActiveRecord::Schema.define(version: 20160802153123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160802152109) do
     t.datetime "updated_at",    null: false
     t.integer  "fb_id"
     t.integer  "bot_id"
+    t.index ["bot_id"], name: "index_fb_users_on_bot_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
