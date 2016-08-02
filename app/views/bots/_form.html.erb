@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <%= simple_form_for @bot do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, placeholder: "Bot name"%>
+    <%= f.button :submit %>
+  <% end %>
+</div>

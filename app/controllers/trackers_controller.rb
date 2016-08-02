@@ -1,5 +1,5 @@
 class TrackersController < ApplicationController
-  before_action :set_tracker, only: [ :show, :destroy]
+  before_action :set_tracker, only: [:show, :destroy]
   def index
     @trackers = Tracker.all
   end
